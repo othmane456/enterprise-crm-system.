@@ -30,7 +30,7 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
 
 If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
 
@@ -70,7 +70,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Responsive**: Full responsiveness across devices for consistent user experience; fluid design adapts seamlessly to various screen sizes, ensuring accessibility.
 
-and many more, including code architecture and reusability 
+and many more, including code architecture and reusability
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
@@ -98,7 +98,6 @@ Install the project dependencies using npm:
 ```bash
 npm install
 ```
-
 
 **Running the Project**
 
@@ -363,7 +362,7 @@ export default config;
 import gql from "graphql-tag";
 
 // Mutation to update user
-export const UPDATE_USER_MUTATION = gql`
+export const UPDATE_USERS_MUTATION = gql`
   # The ! after the type means that it is required
   mutation UpdateUser($input: UpdateOneUserInput!) {
     # call the updateOneUser mutation with the input and pass the $input argument
@@ -828,7 +827,7 @@ import { CloseOutlined } from "@ant-design/icons";
 import { Button, Card, Drawer, Form, Input, Spin } from "antd";
 
 import { getNameInitials } from "@/utilities";
-import { UPDATE_USER_MUTATION } from "@/graphql/mutations";
+import { UPDATE_USERS_MUTATION } from "@/graphql/mutations";
 
 import { Text } from "../text";
 import CustomAvatar from "../custom-avatar";
@@ -895,7 +894,7 @@ export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
      */
     meta: {
       // gqlMutation is used to specify the mutation that should be performed.
-      gqlMutation: UPDATE_USER_MUTATION,
+      gqlMutation: UPDATE_USERS_MUTATION,
     },
   });
   const { avatarUrl, name } = queryResult?.data?.data || {};
@@ -1577,7 +1576,6 @@ export const ContactStatusTag = ({ status }: Props) => {
 ```
 
 </details>
-
 
 <details>
 <summary><code>components/text-icon.tsx</code></summary>
